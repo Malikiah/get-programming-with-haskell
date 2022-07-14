@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           interacting-with-the-commandline
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/malikiah/interacting-with-the-commandline#readme>
+homepage:       https://github.com/malikiah/interacting-with-the-commandline#readme
+bug-reports:    https://github.com/malikiah/interacting-with-the-commandline/issues
+author:         Damian McCarthy
+maintainer:     damianmmccarthy@protonmail.com
+copyright:      BSD
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/malikiah/interacting-with-the-commandline
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_interacting_with_the_commandline
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable interacting-with-the-commandline
+  main-is: Main.hs
+  other-modules:
+      SumLazy
+      Paths_interacting_with_the_commandline
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , interacting-with-the-commandline
+  default-language: Haskell2010
+
+test-suite interacting-with-the-commandline-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_interacting_with_the_commandline
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , interacting-with-the-commandline
+  default-language: Haskell2010
